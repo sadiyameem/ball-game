@@ -4,13 +4,13 @@
     box-sizing: border-box;
     overflow: hidden;
     cursor: pointer;
-} */
+}
 
-/* #canvas {
+#canvas {
     background-color: rgb(24,28,31);
-} */
+}
 
-/* .startGame {
+.startGame {
     z-index: 1;
     display: flex;
     width: 100vw;
@@ -26,9 +26,9 @@
 
 .home h1 span {
     font-size: 1.1rem;
-} */
+}
 
-/* #startGameBtn {
+#startGameBtn {
     margin: 12px 0;
     padding: 8px 16px;
     color: white;
@@ -43,9 +43,9 @@
     cursor: pointer;
     align-items: center;
     transition: .2s;
-} */
+}
 
-/* #startGameBtn:hover {
+#startGameBtn:hover {
     background-color: rgb(225, 35, 35);
 }
 
@@ -72,9 +72,9 @@
     pointer-events: none;
     display: none;
     padding: 10px 20px;
-} */
+}
 
-/* .gameHeading {
+.gameHeading {
     position: absolute;
     top: 0;
     left: 50%;
@@ -90,12 +90,12 @@
 
 .gameHeading p {
     margin: 0;
-} */
+}
 
-/* .gameEndContainer {
-    background-color: rgb(255, 49, 84); */
-    /*background-color: rgb(255, 49, 84);*/
-    /*border: 2px solid white
+ .gameEndContainer {
+    background-color: rgb(255, 49, 84);
+    background-color: rgb(255, 49, 84);
+    border: 2px solid white;
     border-radius: 6px;
     pointer-events: all;
     color: white;
@@ -103,9 +103,9 @@
     box-shadow: 0px 0px 12px rgba(0,0,0,0.697);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-} */
+}
 
-/* .gameEndContainer h1 {
+ .gameEndContainer h1 {
     font-size: 1.5rem;
     text-align: center;
 }
