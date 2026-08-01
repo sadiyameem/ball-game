@@ -6,7 +6,7 @@ const message = document.getElementById('message');
 let score = 0;
 let timeLeft = 30;
 let fruits = [];
-const fruitTypes = ['🍊', '🍋', '🍉', '🍇', '🍓', '🍑', '🍍','🍏', '🍎', '🍐', '🍋‍🟩', '🍌', '🫐', '🍈', '🍒',];
+const fruitTypes = ['🍊', '🍋', '🍉', '🍇', '🍓', '🍑', '🍍','🍏', '🍎', '🍐', '🍋‍🟩', '🍌', '🫐', '🍈', '🍒', '🥥', '🥭', '🥑', '🥝'];
 
 function createFruit() {
     if (timeLeft <= 0) return;
