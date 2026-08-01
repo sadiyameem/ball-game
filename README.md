@@ -1,4 +1,3 @@
-<img width="2940" height="1584" alt="Screenshot 2026-08-01 at 2 45 06 PM" src="https://github.com/user-attachments/assets/860ab085-246d-4239-9abf-3e5704ee71c6" />
 # Ninja Fruit Game
 
 # Description
