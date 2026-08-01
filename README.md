@@ -25,4 +25,5 @@
 - After realizing my mistake I learned how to define variables properly.
 
 # Image
-<img width="1920" height="1200" alt="wp7567364-fruit-ninja-wallpapers" src="https://github.com/user-attachments/assets/d021a919-4ed8-4c1d-a871-9062de9c7603" />
+<img width="2940" height="1540" alt="Screenshot 2026-08-01 at 2 42 53 PM" src="https://github.com/user-attachments/assets/9eb1bc51-4c1b-49a1-b4ef-a6fb0860b139" />
+
