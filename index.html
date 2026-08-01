@@ -3,45 +3,14 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ball Game</title>
+    <title>Ball Ninja Game</title>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="gameHeading">
-            <p>Ball Ninja Game</p>
-        </div>
-
-        <canvas id="canvas"></canvas>
-
-        <div class="startGame" id="startGame">
-            <div class="home">
-                <h1>Ball Ninja Game</h1>
-                <button id="startGameBtn">Play</button>
-                <p>Your High Score: <span id="homeHighScore"></span></p>
-            </div>
-            
-            <div class="countDown" id="countDownContainer">
-                <h1></h1>
-            </div>
-
-            <div id="inGameContainer">
-                <div class="scoreDiv">
-                    <p>Score: <span id= "score"></span></p>
-                    <p>High Score: <span id= "highscore"></span></p>
-                </div>
-                <div class="gameCountTime"></div>
-                <h1 id="gameMinuteAndSecond">00:00</h1>
-            </div>
-            <div id="strikeCountDiv">
-                <h1 class="strikeCount">1</h1>
-            </div>
-        </div>
-
-        <div id="endGameDiv">
-            <div class="endGameContainer">
-                <p>Your Score: <span id="endGameScore"></span></p>
-                <button id="returnHome">Return Home</button>
-            </div>
+        <div id="game">
+            <div id="score">Score: 0</div>
+            <div id="timer">Time: 30</div>
+            <div id="message">NINJA MASTER!</div>
         </div>
         <script src="script.js"></script>
     </body>
