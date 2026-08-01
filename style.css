@@ -1,4 +1,4 @@
-/* body {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 #canvas {
-    background-color: white;
+    background-color: black;
 }
 
 .startGame {
@@ -97,7 +97,7 @@
     margin: 0;
 }
 
- .gameEndContainer {
+ .endGameContainer {
     background-color: black;
     border: 2px solid white;
     border-radius: 6px;
@@ -109,12 +109,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
- .gameEndContainer h1 {
+ .endGameContainer h1 {
     font-size: 1.5rem;
     text-align: center;
 }
 
-.gameEndContainer p {
+.endGameContainer p {
     font-size: 22px;
 }
 
@@ -124,5 +124,112 @@
     outline: none;
     border-bottom: 2px solid black;
     color: black; 
-    font-size: pointer;
-} */
+    cursor: pointer;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+
+.home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.home p {
+    font-size: 1rem;
+}
+
+.countDown {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.countDown h1 {
+    color: white;
+    font-size: 120px;
+}
+
+.scoreDiv {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.scoreDiv p {
+    margin: 6px;
+}
+
+#gameMinuteAndSecond {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+    font-size: 23px;
+}
+
+#strikeCountDiv{
+    position:absolute;
+    bottom:25px;
+    right:25px;
+    display:none;
+}
+
+.strikeCount{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:red;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+}
+
+#endGameDiv{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.65);
+    z-index:20;
+}
+
+#returnHome{
+    margin-top:20px;
+    padding:10px 20px;
+    background:purple;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.2s;
+}
+
+#returnHome:hover{
+    background:mediumorchid;
+}
+
+#canvas{
+    display:block;
+    width:100vw;
+    height:100vh;
+    background:white;
+}

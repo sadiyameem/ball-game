@@ -14,9 +14,13 @@ playButton.addEventListener('click', () => {
     startGameContainer.style.display = 'none';
     inGameContainer.style.display = 'flex';
     alertTimer();
+    score = 0;
+    updateScore(0);
+    isGameStarted = true;
+    isGameEnd = false;
     settimeout(() => {
         animate();
-        // startRenderingBallInterval();
+        startRenderingBallInterval();
         startGameTimer();
     }, 4000)
 })
@@ -32,11 +36,15 @@ const alertTimer = () => {
             clearInterval(timerInterval);
             countDownContainer.innerHTML = ``;
             isGamePause = false;
+            return
         }
     },1000)
 }
 
 const startGameTimer = () => {
+    if (!isGameStarted) {
+        return
+    }
     let minutesInGame = 2;
     let totalTime = minutesInGame * 60;
     let interval = setInterval(() => {
@@ -47,8 +55,11 @@ const startGameTimer = () => {
         totalTime--;
         if (totalTime < 0) {
             document.getElementById('gameMinuteAndSecond').innerHTML = `00 : 00`;
+            endGameContainer.style.display = 'flex';
+            document.getElementById('endGameScore').innerHTML = score;
             isGameEnd = true;
             isGameStarted = false;
+            gameEndSound.play();
             ballArray = [];
             ballParticlesArray = [];
             enemyBombArray = [];
@@ -58,6 +69,8 @@ const startGameTimer = () => {
 
 let score = 0;
 let highScore = localStorage.getItem('highScore') || 0;
+document.getElementById('highScore').innerHTML = highScore;
+document.getElementById('homeHighScore').innerHTML = highScore;
 
 const updateScore = (noOfScore) => {
     if (noOfScore + score < 0) {
@@ -188,7 +201,7 @@ function renderBalls() {
             }
 
             lastBallSlice = new Date().getTime();
-            let scoreToUpdate = (ballArray[i].size < 40? 3 : 5);
+            let scoreToUpdate = (ballArray[i].size < 40? 3 : 5) + strikeCount;
             updateScore(scoreToUpdate)
 
             ballArray.splice(i,1);
@@ -249,6 +262,10 @@ let numberOfBallsToRender = [1,2,3,4,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,1];
 
 const startRenderingBallInterval = () => {
     let interval = setInterval(() => {
+        if (isGameEnd) {
+            clearInterval(interval)
+            return;
+        }
         if (isGamePause) {
             return
         }
@@ -278,6 +295,10 @@ function animate() {
     renderBallParticles();
     renderEnemyBombs();
     renderMouseLines();
+    if (isGameEnd) {
+        cancelAnimationFrame(animationId);
+        return
+    }
     animationId = requestAnimationFrame(animate);
 }
 
@@ -340,5 +361,17 @@ canvas.addEventListener('mouseout', (e) => {
     mouseY = 0;
     linesArray = [];
     isMouseClicked = false;
+})
+
+const returnHomeButton = document.getElementById("returnHome");
+const endGameContainer = document.getElementById("gameEndDiv");
+
+returnHomeButton.addEventListener('click', () => {
+    if (isGameEnd) {
+        return
+    }
+    endGameContainer.style.display = 'none';
+    startGameContainer.style.display = 'flex';
+    inGameContainer.style.display = 'none';
 })
 
