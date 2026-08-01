@@ -1,7 +1,7 @@
 # Ninja Fruit Game
 
 # Description
-- This is a browser based game inspired by a classic game called Fruit Ninja.
+- This is a browser based game just like the classic game called Fruit Ninja.
 - How it works is the player will click on the fruits to earn points before the timer runs out.
 
 # Features
