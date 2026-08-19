@@ -11,6 +11,9 @@
 - Game over screen
 - Restart option
 - click to "slice"
+- Sound effects when fruits are clicked
+- Background changing buttons
+- Start page
  
 # Tools
 - HTML
@@ -19,6 +22,7 @@
 - https://emojicopy.com/
 - https://wallpapercave.com/fruit-ninja-wallpapers#google_vignette
 - https://www.supercheats.com/guides/fruit-ninja/fruit
+- https://pixabay.com/sound-effects/
 
 # Challenges/Learned
 - A challenge was that an error appeared in my console because the variable fruit was not defined. This caused the fruits to not appear which made the game not work.
