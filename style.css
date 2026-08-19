@@ -27,7 +27,7 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    color: white;
+    color: gray;
     font-size: 24px;
 }
 
@@ -35,7 +35,7 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    color: white;
+    color: gray;
     font-size: 24px;
 }
 
@@ -46,4 +46,42 @@ body {
     transform: translate(-50%, -50%);
     font-size: 48px;
     display: none;
+}
+
+.theme-selector {
+    display: flex;
+    justify-content: center;
+}
+
+.theme-selector button {
+    background-color: gray;
+    cursor: pointer;
+}
+
+#game {
+    background-size: cover;
+}
+
+body#ninja #game {
+    background-image: url('ninja.jpg');
+}
+
+body#wall #game {
+    background-image: url('wall.jpg');
+}
+
+body#yin-yang #game {
+    background-image: url('yin-yang.jpg');
+}
+
+body#watermelon #game {
+    background-image: url('watermelon.png');
+}
+
+body#blue #game {
+    background-image: url("blue.jpg");
+}
+
+body#white #game {
+    background-image: url("white.jpg");
 }
