@@ -85,3 +85,35 @@ body#blue #game {
 body#white #game {
     background-image: url("white.jpg");
 }
+
+#introScreen {
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    background-color: white;
+}
+
+#introScreenContent {
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    background-color: brown;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+}

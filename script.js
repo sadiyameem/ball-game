@@ -2,11 +2,13 @@ const game = document.getElementById('game');
 const scoreDisplay = document.getElementById('score');
 const timerDisplay = document.getElementById('timer');
 const message = document.getElementById('message');
+const fruitSound = new Audio('slicing.mp3')
 
 let score = 0;
 let timeLeft = 30;
 let fruits = [];
 const fruitTypes = ['🍊', '🍋', '🍉', '🍇', '🍓', '🍑', '🍍','🍏', '🍎', '🍐', '🍋‍🟩', '🍌', '🫐', '🍈', '🍒', '🥥', '🥭', '🥑', '🥝'];
+const bomb = "💣";
 
 function createFruit() {
     if (timeLeft <= 0) return;
@@ -39,10 +41,12 @@ function createFruit() {
 
     fruit.addEventListener('click', () => {
         clearInterval(animate);
+        fruitSound.currentTime = 0;
+        fruitSound.play();
         score += 10;
         scoreDisplay.textContent = `Score: ${score}`;
         fruit.style.transform = `scale(1.5)`;
-        fruit.style.opacoty = '0';
+        fruit.style.opacity = '0';
         setTimeout(() => fruit.remove(), 200);
 
         if (score >= 200) {
@@ -93,5 +97,11 @@ createFruit();
 const setTheme = (theme) => {
     localStorage.setItem('theme', theme);
     document.body.id = theme;
+    fruitSound.play();
 }
 document.body.id = localStorage.getItem('theme') || 'default';
+
+function startGame() {
+    alert('Start Game Button Pressed!');
+    document.getElementById('introScreen').style.display = 'none';
+}
