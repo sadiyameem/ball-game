@@ -1,0 +1,31 @@
+# Ninja Fruit Game
+
+# Description
+- This is a browser based game just like the classic game called Fruit Ninja.
+- How it works is the player will click on the fruits to earn points before the timer runs out.
+
+# Features
+- Random fruits spawning
+- Score
+- Timer
+- Game over screen
+- Restart option
+- click to "slice"
+ 
+# Tools
+- HTML
+- CSS
+- JavaScript
+- https://emojicopy.com/
+- https://wallpapercave.com/fruit-ninja-wallpapers#google_vignette
+- https://www.supercheats.com/guides/fruit-ninja/fruit
+
+# Challenges/Learned
+- A challenge was that an error appeared in my console because the variable fruit was not defined. This caused the fruits to not appear which made the game not work.
+- After realizing my mistake I learned how to define variables properly.
+
+# Image
+<img width="2940" height="1540" alt="Screenshot 2026-08-01 at 2 42 53 PM" src="https://github.com/user-attachments/assets/9eb1bc51-4c1b-49a1-b4ef-a6fb0860b139" />
+<img width="2940" height="1584" alt="Screenshot 2026-08-01 at 2 45 06 PM" src="https://github.com/user-attachments/assets/cbceab12-fba0-4eba-a147-3c40eb471312" />
+
+
